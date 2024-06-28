@@ -1,0 +1,156 @@
+Query to create table and columns for table ipl_ball_by_ball_2008_2022
+CREATE TABLE ipl_ball_by_ball_2008_2022
+(
+    id int8 NOT NULL,
+	innings int8,
+	overs int8,
+	ball_number int8,
+	batter varchar(50),
+	bowler varchar(50),
+	non_striker varchar(50),
+	extra_type varchar(50),
+	batsman_run int8,
+	extras_run int8,
+	total_run int8,
+	non_boundry int8,
+	iswicket_delivery int8,
+	player_out varchar(50),
+	dismisal_kind varchar(50),
+	fielders_involved varchar(50),
+	batting_team varchar(50)
+)
+Explanation : CREATE TABLE ipl_ball_by_ball_2008_2022
+CREATE TABLE is a SQL command used to create a new table in a database.
+ipl_ball_by_ball_2008_2022 is the name of the table being created. This table will store ball-by-ball data for IPL matches from 2008 to 2022.
+
+id int8 NOT NULL,
+id is the name of the column.
+int8 specifies that the data type for this column is a 64-bit integer.
+NOT NULL ensures that this column cannot contain NULL values, meaning every row must have a value for id.
+
+innings int8,
+innings is the name of the column.
+int8 specifies that the data type for this column is a 64-bit integer.
+This column stores the inning number of the match.
+
+overs int8,
+overs is the name of the column.
+int8 specifies that the data type for this column is a 64-bit integer.
+This column stores the over number within the innings.
+
+
+ball_number int8,
+ball_number is the name of the column.
+int8 specifies that the data type for this column is a 64-bit integer.
+This column stores the ball number within the over.
+
+batter varchar(50),
+batter is the name of the column.
+varchar(50) specifies that the data type for this column is a variable-length character string with a maximum length of 50 characters.
+This column stores the name of the batsman facing the ball.
+
+bowler varchar(50),
+bowler is the name of the column.
+varchar(50) specifies that the data type for this column is a variable-length character string with a maximum length of 50 characters.
+This column stores the name of the bowler delivering the ball.
+
+non_striker varchar(50),
+non_striker is the name of the column.
+varchar(50) specifies that the data type for this column is a variable-length character string with a maximum length of 50 characters.
+This column stores the name of the batsman at the non-striker's end.
+
+extra_type varchar(50),
+extra_type is the name of the column.
+varchar(50) specifies that the data type for this column is a variable-length character string with a maximum length of 50 characters.
+This column stores the type of extra run, such as wide, no-ball, etc.
+
+batsman_run int8,
+batsman_run is the name of the column.
+int8 specifies that the data type for this column is a 64-bit integer.
+This column stores the number of runs scored by the batsman on that delivery.
+
+extras_run int8,
+extras_run is the name of the column.
+int8 specifies that the data type for this column is a 64-bit integer.
+This column stores the number of extra runs conceded by the bowling side on that delivery.
+
+total_run int8,
+total_run is the name of the column.
+int8 specifies that the data type for this column is a 64-bit integer.
+This column stores the total runs scored on that delivery, including batsman runs and extras.
+
+non_boundry int8,
+non_boundry is the name of the column.
+int8 specifies that the data type for this column is a 64-bit integer.
+This column indicates whether the run(s) were scored without hitting the boundary (1 for true, 0 for false).
+
+iswicket_delivery int8,
+iswicket_delivery is the name of the column.
+int8 specifies that the data type for this column is a 64-bit integer.
+This column indicates whether the delivery resulted in a wicket (1 for true, 0 for false).
+
+player_out varchar(50),
+player_out is the name of the column.
+varchar(50) specifies that the data type for this column is a variable-length character string with a maximum length of 50 characters.
+This column stores the name of the player who got out on that delivery.
+
+dismisal_kind varchar(50),
+dismisal_kind is the name of the column.
+varchar(50) specifies that the data type for this column is a variable-length character string with a maximum length of 50 characters.
+This column stores the type of dismissal (e.g., bowled, caught, run-out, etc.).
+
+fielders_involved varchar(50),
+fielders_involved is the name of the column.
+varchar(50) specifies that the data type for this column is a variable-length character string with a maximum length of 50 characters.
+This column stores the names of the fielders involved in the dismissal.
+
+batting_team varchar(50)
+batting_team is the name of the column.
+varchar(50) specifies that the data type for this column is a variable-length character string with a maximum length of 50 characters.
+
+
+Query to copy all data for table ipl_matches_2008_2022
+COPY ipl_matches_2008_2022 FROM 'D:\ipl_matches_2008_2022.csv' DELIMITER ',' CSV HEADER;
+
+
+Query to create table and columns for table ipl_ball_by_ball_2008_2022
+CREATE TABLE ipl_ball_by_ball_2008_2022
+(
+    id int8 NOT NULL,
+	innings int8,
+	overs int8,
+	ball_number int8,
+	batter varchar(50),
+	bowler varchar(50),
+	non_striker varchar(50),
+	extra_type varchar(50),
+	batsman_run int8,
+	extras_run int8,
+	total_run int8,
+	non_boundry int8,
+	iswicket_delivery int8,
+	player_out varchar(50),
+	dismisal_kind varchar(50),
+	fielders_involved varchar(50),
+	batting_team varchar(50)
+)
+The explanation is same type as provided above.
+
+
+
+Query to copy all data for table ipl_ball_by_ball_2008_2022
+COPY ipl_ball_by_ball_2008_2022 FROM 'D:\ipl_ball_by_ball_2008_2022.csv' DELIMITER ',' CSV HEADER;
+
+
+*Note- 'D:\ipl_ball_by_ball_2008_2022.csv' this is the location path of the file where it is placed, we need to import this file data in our table. 
+It will be different for you if you store data other than D drive or in any folder inside D drive.
+Make sure you use correct path.
+    
+
+
+
+
+
+	
+    
+
